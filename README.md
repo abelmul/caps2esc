@@ -33,6 +33,11 @@ ESC when pressed alone is quite handy, specially in vi.
 
 - [libevdev][]
 
+## The diffrent versions
+
+The master branch converts ESC to CAPS LOCK as default to not change the ESC keys to CAPS LOCK
+checkout the escnotcaps branch and build it.
+
 ## Building
 
 `gcc caps2esc.c -o caps2esc -I/usr/include/libevdev-1.0 -levdev -ludev`
@@ -43,7 +48,7 @@ The following daemonized sample execution increases the application priority
 (since it'll be responsible for a vital input device, just to make sure it stays
 responsible):
 
-`sudo nice -n -20 ./caps2esc >caps2esc.log 2>caps2esc.err &`
+`sudo nice -n -20 ./caps2esc >caps2esc.log 2>caps2esc.err &
 
 ## Installation
 
